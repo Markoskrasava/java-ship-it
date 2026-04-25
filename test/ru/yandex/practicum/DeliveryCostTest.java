@@ -65,4 +65,34 @@ public class DeliveryCostTest {
         assertTrue(Box.getMaxWeight() > currentWeight);
     }
 
+    @Test
+    public void shouldBeEqualStandartParcel() {
+        StandartParcel testStandartParcel1 = new StandartParcel("Компьютер", 4, "улица Компьютерная 10к1", 15);
+        StandartParcel testStandartParcel2 = new StandartParcel("Компьютер", 4, "улица Компьютерная 10к1", 15);
+        if (testStandartParcel1.equals(testStandartParcel2)) {
+            System.out.println("В классе StandartParcel equals работает корректно");
+        }
+        assertTrue(testStandartParcel1.equals(testStandartParcel2));
+    }
+
+    @Test
+    public void shouldBeEqualFragileParcel() {
+        FragileParcel testFragileParcel1 = new FragileParcel("Компьютер", 4, "улица Компьютерная 10к1", 15);
+        FragileParcel testFragileParcel2 = new FragileParcel("Компьютер", 4, "улица Компьютерная 10к1", 15);
+        if (testFragileParcel1.equals(testFragileParcel2)) {
+            System.out.println("В классе StandartParcel equals работает корректно");
+        }
+        assertTrue(testFragileParcel1.equals(testFragileParcel2));
+    }
+
+    @Test
+    public void shouldBeEqualPerishableParcel() {
+        PerishableParcel testPerishableParcel1 = new PerishableParcel("Компьютер", 4, "улица Компьютерная 10к1", 15, 9);
+        PerishableParcel testPerishableParcel2 = new PerishableParcel("Компьютер", 4, "улица Компьютерная 10к1", 15, 9);
+        if (testPerishableParcel1.equals(testPerishableParcel2)) {
+            System.out.println("В классе PerishableParcel equals работает корректно");
+        }
+        assertTrue(testPerishableParcel1.equals(testPerishableParcel2));
+    }
+
 }

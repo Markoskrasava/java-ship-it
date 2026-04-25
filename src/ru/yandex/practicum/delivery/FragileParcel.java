@@ -1,5 +1,7 @@
 package ru.yandex.practicum.delivery;
 
+import java.util.Objects;
+
 public class FragileParcel extends Parcel implements Trackable{
     private static final int fixSum = 4;
 
@@ -28,11 +30,17 @@ public class FragileParcel extends Parcel implements Trackable{
     }
 
     @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
     public String toString() {
-        return "[Описание='" + description + '\'' +
-                ", Вес=" + weight +
-                ", Адрес доставки='" + deliveryAddress + '\'' +
-                ", День отправки=" + sendDay +
-                "]";
+        return super.toString() + "]";
     }
 }

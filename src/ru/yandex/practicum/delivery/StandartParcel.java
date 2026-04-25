@@ -1,5 +1,7 @@
 package ru.yandex.practicum.delivery;
 
+import java.util.Objects;
+
 public class StandartParcel extends Parcel {
     private static final int fixSum = 2;
 
@@ -11,10 +13,6 @@ public class StandartParcel extends Parcel {
         return weight;
     }
 
-    @Override
-    public void packageItem() {
-        System.out.println("Посылка " + description +  " упакована");
-    }
 
     @Override
     public int calculateDeliveryCost() {
@@ -22,11 +20,18 @@ public class StandartParcel extends Parcel {
     }
 
     @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+
+    @Override
     public String toString() {
-        return "[Описание='" + description + '\'' +
-                ", Вес=" + weight +
-                ", Адрес доставки='" + deliveryAddress + '\'' +
-                ", День отправки=" + sendDay +
-                "]";
+        return super.toString() + "]";
     }
 }

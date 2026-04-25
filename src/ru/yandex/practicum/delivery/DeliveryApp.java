@@ -80,7 +80,6 @@ public class DeliveryApp {
                     int sendDayStandart = Integer.parseInt(scanner.nextLine());
                     StandartParcel standartParcel = new StandartParcel(descriptionStandart, weightStandart, deliveryAddressStandart, sendDayStandart);
                     allParcels.add(standartParcel);
-                    System.out.println("Посылка добавлена");
                     standartParcels.addParcel(standartParcel);
                     break;
                 case 2:
@@ -95,7 +94,6 @@ public class DeliveryApp {
                     FragileParcel fragileParcel = new FragileParcel(descriptionFragile, weightFragile, deliveryAddressFragile, sendDayFragile);
                     allParcels.add(fragileParcel);
                     trackingParcels.add(fragileParcel);
-                    System.out.println("Посылка добавлена");
                     fragileParcels.addParcel(fragileParcel);
                     break;
                 case 3:
@@ -111,7 +109,6 @@ public class DeliveryApp {
                     int timeToLivePerishable = Integer.parseInt(scanner.nextLine());
                     PerishableParcel perishableParcel = new PerishableParcel(descriptionPerishable, weightPerishable, deliveryAddressPerishable, sendDayPerishable, timeToLivePerishable);
                     allParcels.add(perishableParcel);
-                    System.out.println("Посылка добавлена");
                     perishableParcels.addParcel(perishableParcel);
                     break;
                 default:
